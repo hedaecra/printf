@@ -34,3 +34,19 @@ _putchar(str[count]);
 }
 return (count);
 }
+
+#include "main.h"
+#include <stdlib.h>
+
+/**
+ *print_per - funtions that prints percent symbol
+ *@per: argument of type of va_list
+ * Return: integer
+ */
+int print_per(va_list per)
+{
+(void)per;
+
+_putchar('%');
+return (1);
+}
