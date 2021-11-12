@@ -2,7 +2,7 @@
 
 ## Flowchart
 
-https://app.code2flow.com/0FVgTQYGFEqX
+![This is a alt text.](https://app.code2flow.com/0FVgTQYGFEqX.png "This is a sample image.")
 
 ### Objective:
 
