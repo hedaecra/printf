@@ -1,20 +1,25 @@
-.TH man 3 "08-11-2021" "_printf man page"
+.TH _PRINTF "12-11-2021" "_printf man page"
 
 .SH NAME
-printf \- Formatted output conversion recreated printf C standard library function.
+_printf \- Recreation of printf C standard library function.
 
 .SH SYNOPSIS
-.B #include \(dqmain.h\(dq
-.sp
+.B #include <stdio.h>
+.B #include <stdarg.h>
+.B #include <stdlib.h>
 .B int _printf(const char *
 .I format
 .B , ...);
 
 .SH DESCRIPTION
 .B _printf
-The functions in _printf() writes output according to a format.
+This _printf.c program produces an output similar to the tradictional printf() function in C language, the function _printf() writes output according to a format.
 
 .SH Format
+.TP
+.BR s 
+The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte.
+
 .TP
 .BR c
 The int argument is converted to an unsigned char, then the resulting character is written.
@@ -22,10 +27,6 @@ The int argument is converted to an unsigned char, then the resulting character 
 .TP
 .BR b
 The int argument is converted to a binary.
-
-.TP
-.B s
-The const char * argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written up to a terminating null byte, but do ot include the terminating null byte.
 
 .TP
 .B d, i
@@ -79,8 +80,8 @@ That way, _putchar only needs to call write one time, passing to it the whole bu
 
 .SH CREDITS
 .PP
-This man page is created as a project to recreate the C standard ibrary pintf for Holberton school.
-<https://www.holbertonschool.com/tn/en>
+This man page is created as a project to recreate the C standard library printf for Holberton school.
+<https://www.holbertoncolombia.com/>
 
 .SH AUTHORS
 Cesar Andres Calero <https://github.com/Cecales>

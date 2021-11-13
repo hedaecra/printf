@@ -1,10 +1,10 @@
-# Printf
+# Printf :floppy_disk: 
 
 ## Flowchart
 
 ![This is a alt text.](https://app.code2flow.com/0FVgTQYGFEqX.png "This is a sample image.")
 
-### Objective:
+### Objective: :clipboard:
 
 * The main objetive is recreate the C library printf
 
@@ -23,18 +23,49 @@
 * All your header files should be include guarded
 * Note that we will not provide the _putchar function for this project
 
+## Description :page_with_curl:
+
+`_printf` is our custom implementation of the C `printf` program function . It produces an output according to format described.
+
 ## Prototype
 
 ```
 int _printf(const char *format, ...);
 ```
 
-## Usage
+## Usage :computer:
 
-* Prints a string to the standard output, according to a given format
-* All files were created and compiled on Ubuntu 14.04.4 LTS using GCC 4.8.4 with the command gcc -Wall -Werror -Wextra -pedantic *.c
-* Returns the number of characters in the output string on success, -1 otherwise
-* Call it this way: _printf("format string", arguments...) where format string can contain conversion specifiers and flags, along with regular characters
+|Specifiers   |  Printed As  |
+| :------------: | :------------: |
+| c  |  characters |
+|s   | string of characters  |
+| %  | no conversion, writes '%'  |
+|  d or i  | int to signed decimal  |
+
+**String**
+* Specifier: `%s`
+* Input:  `len = _printf("I am a string. \n");`
+* Output: `I am a string`
+
+**Character**
+* Specifier: `%c`
+* Input:  `_printf("char: %c\n", 'A');`
+* Output: `char: A`
+
+**Integer**
+* Specifier: `%i`
+* Input:  `_printf("Length: %i\n", len);
+* Output: `Length: 16`
+
+**Decimal:**
+* Specifier: `%d`
+* Input:  `_printf("%d\n", 1000);`
+* Output: `1000`
+
+**Percent:**
+* Specifier: `%%` 
+* Input:  `_printf("%%\n", %);`
+* Output: `%`
 
 ## Examples
 
@@ -42,17 +73,21 @@ int _printf(const char *format, ...);
 * _printf("%s", "Hello") prints "Hello"
 * _printf("This is a number: %d", 98) prints "This is a number: 98"
 
-## _putchar
+## Files
+File Name | Description
+--- | ---
+`_printf.c` | Produces an output according to specifiers 
+`_putchar.c` | Function to write a char to standard output
+`main.h` | Header file with function prototypes and struct
+`print_chars.c` | Containing functions to print char, string and % symbols
+`print_numbers.c` | Containing functions to print decimal and integer numbers
 
-* this function prints an individual character (similar to standard library putchar)
+### Main Functionality :rocket:
 
-## printf
+- [X] Produces output with (printf) conversion specifiers c, s, and %.
+- [X] Handles conversion specifiers d, i.
+- [X] man page added.
 
-* The core function where the buffer is defined and freed. All other functions are called from here
-
-## main.h
-
-* Header file that contains prototypes for all the functions and a struct holding a function and a character
 
 ## Madatory Task
 
@@ -60,15 +95,15 @@ int _printf(const char *format, ...);
 * Handle conversion specifiers d, i.
 * Create a man page for your function.
 
-## man_printf_(3)
+## man_3_printf
 
-* Custom man page Create a man page for your function._
+* Custom man page made for the _printf function, it´s include in the `_printf` repository [printf](https://github.com/hedaecra/printf).
 
-## Build with
+## Build with :wrench:
 
 * Made in C Language and compiled in Ubuntu 20.04 LTS
 
-## Authors ✒️
+## Authors :black_nib:
 
 * **Hernan Echeverri** - *Holberton Student* - [Hedaecra](https://github.com/hedaecra)
 * **César Calero** - *Holberton Student* - [Cecales](https://github.com/Cecales)
