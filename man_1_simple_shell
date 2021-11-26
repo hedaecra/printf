@@ -1,0 +1,73 @@
+.\" Manpage for Simple Shell.
+.TH "Simple Shell" 1 "26 November 2021" "1.0" "Simple Shell man page"
+
+.SH NAME
+hsh - Simple Shell
+
+.SH SYNOPSIS
+hsh (does not support arguments)
+
+.SH DESCRIPTION
+Welcome to the Simple Shell project! This program is a simple shell that can be compiled and launched from the command line within any number of Linux versions.
+
+.SH OVERVIEW
+The Simple Shell project is a major team project conducted by Martín Vidan and César Calero, students at Holberton School.
+
+.SH RETURN VALUE
+The shell returns the error code given by the last completed command followed by either ctrl-d or exit with no status code.
+
+.SH SYNTAX
+SIMPLE_SHELL$ <command> <flags or options> <argument 1> <argument 2> ...
+
+$ <command> | ./hsh
+.SS
+
+.SS
+EXAMPLE 1:
+SIMPLE_SHELL$ /bin/ls
+.SS
+EXAMPLE 2:
+SIMPLE_SHELL$ ls -l
+.SS
+EXAMPLE 3:
+SIMPLE_SHELL$ cat textfile
+.SS
+
+
+.SS
+EXAMPLE 4:
+$ echo "ls -l" | ./hsh
+
+.SH BUILTIN COMMANDS
+.SS alias
+- create or list an alias
+
+.SS cd
+- change directory
+
+.SS env
+- list the current environment variable
+
+.SS exit
+- exit from shell
+
+.SS help
+- display help for a builtin command
+
+.SH SEE ALSO
+DASH(1)
+
+.SH BUGS
+No known bugs
+
+.SH CREDITS
+.PP
+This man page is created as a project to recreate the C standard library printf for Holberton school.
+<https://www.holbertoncolombia.com/>
+
+.SH AUTHORS
+César Andrés Calero Espitia              Martín Vidan
+
+3839@holbertonschool.com                 ####@holbertonschool.com
+
+https://github.com/Cecales               https://github.com/
